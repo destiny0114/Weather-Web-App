@@ -27,6 +27,8 @@ app.post('/geocode', (req, res) => {
         url: url,
         responseType: 'json'
     }).then(response => {
+        console.log(GOOGLE_GEOCODING_API_KEY);
+
         return res.json(response.data);
     });
     // axios.get('http://localhost:3000/sample.json').then(response => {
